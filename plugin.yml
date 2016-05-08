@@ -1,0 +1,33 @@
+name: ServerTools
+main: Survingo\ServerTools\ServerTools
+version: 1.0.0
+author: Survingo
+api:
+ - 1.12.0
+ - 1.13.1
+ - 2.0.0
+description: Manage your Server with ease
+
+commands:
+ servertools:
+  description: "Manage your Server"
+  permission: servertools.command
+  aliases: [tools]
+
+permissions:
+ servertools.command:
+  default: op
+  description: "Main Permission"
+  children:
+   servertools.command.help:
+    default: true
+    description: "Allows showing the help list"
+   servertools.command.enable:
+    default: op
+    description: "Allows enabling Plugins"
+   servertools.command.disable:
+    default: op
+    description: "Allows disabling Plugins"
+   servertools.command.restart:
+    default: op
+    description: "Allows restarting Plugin"
